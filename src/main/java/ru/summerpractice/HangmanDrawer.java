@@ -1,3 +1,5 @@
+package ru.summerpractice;
+
 public class HangmanDrawer {
     public void draw(int stage) {
         String[] hangman = {
