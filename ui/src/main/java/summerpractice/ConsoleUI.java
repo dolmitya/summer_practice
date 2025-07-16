@@ -3,7 +3,15 @@ package summerpractice;
 import java.util.Scanner;
 
 public class ConsoleUI {
-    private final Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner;
+
+    public ConsoleUI() {
+        this.scanner = new Scanner(System.in);
+    }
+
+    public ConsoleUI(Scanner scanner) {
+        this.scanner = scanner;
+    }
 
     public void run() {
         String resourceFile = selectDifficulty();
@@ -16,7 +24,7 @@ public class ConsoleUI {
         showGameResult(game);
     }
 
-    private String selectDifficulty() {
+    public String selectDifficulty() {
         System.out.println("Выберите уровень сложности:");
         System.out.println("1. Лёгкий");
         System.out.println("2. Средний");
@@ -42,7 +50,7 @@ public class ConsoleUI {
         }
     }
 
-    private void playGame(Game game) {
+    public void playGame(Game game) {
         while (!game.isOver()) {
             System.out.println(game.getHangmanDrawing());
             System.out.println("Слово: " + game.getCurrentWordState());
@@ -58,7 +66,7 @@ public class ConsoleUI {
         }
     }
 
-    private char promptLetter() {
+    public char promptLetter() {
         while (true) {
             System.out.print("Введите букву: ");
             String input = scanner.nextLine().trim().toLowerCase();
@@ -71,7 +79,7 @@ public class ConsoleUI {
         }
     }
 
-    private void showGameResult(Game game) {
+    public void showGameResult(Game game) {
         System.out.println(game.getHangmanDrawing());
 
         if (game.isWon()) {
