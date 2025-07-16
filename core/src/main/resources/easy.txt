@@ -1,0 +1,10 @@
+cat
+dog
+sun
+cup
+map
+egg
+bag
+car
+pen
+box
