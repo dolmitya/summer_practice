@@ -1,0 +1,10 @@
+garden
+button
+summer
+planet
+school
+bottle
+rocket
+winter
+orange
+window

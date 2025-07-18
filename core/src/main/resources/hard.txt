@@ -1,0 +1,10 @@
+algorithm
+constructor
+multithreading
+synchronization
+initialization
+encapsulation
+dependency
+architecture
+abstraction
+serialization

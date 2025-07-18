@@ -1,3 +1,5 @@
+package summerpractice;
+
 /*
 консольная игра "Виселица" на языке Java с чтением слов из файла и удобным управлением игровым процессом.
 
@@ -14,13 +16,10 @@
 Поддержка повторного ввода одной и той же буквы с предупреждением.
 Корректная обработка неправильного ввода (цифры, символы, пустой ввод).
 Все слова и буквы приводятся к нижнему регистру.
+Доступен выбор сложности игры
  */
 public class Main {
     public static void main(String[] args) {
-        WordProvider wordProvider = new WordProvider("words.txt");
-        String secretWord = wordProvider.getRandomWord();
-
-        Game game = new Game(secretWord);
-        game.start();
+        new ConsoleUI().run();
     }
 }
